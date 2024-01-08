@@ -154,6 +154,18 @@ public:
 - 可以改进的部分：内层的if循环可以直接令判断(nums[i] ! =val)然后进行元素的赋值和指针位移，判断“num[i]==val”显得多此一举。
 - 时间复杂度：O(n) ||  空间复杂度：O(1)
 
+## 其他
+学习了如何在Visual Studio上调用自己的测试案例，主要是vector的相关知识点
+```cpp
+int main() {
+    vector<int> nums = {-5, 1, 3, 7, 11, 14};
+    int target = 5;
+    Solution solution;
+    cout << solution.search(nums, target) << endl;
+    system("pause");
+}
+```
+
 ## GitHub遇到的问题&解决方案
 
 ### 🆘使用"git add"命令提示"warning: LF will be replaced by CRLF"❓
