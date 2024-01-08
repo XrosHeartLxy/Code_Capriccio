@@ -153,3 +153,38 @@ public:
 
 - 可以改进的部分：内层的if循环可以直接令判断(nums[i] ! =val)然后进行元素的赋值和指针位移，判断“num[i]==val”显得多此一举。
 - 时间复杂度：O(n) ||  空间复杂度：O(1)
+
+## GitHub遇到的问题&解决方案
+
+### 🆘使用"git add"命令提示"warning: LF will be replaced by CRLF"❓
+
+- 问题分析：在文本处理中，CR (CarriageReturn)、 LF (LineFeed)、 CR/LF 是不同操作系统上使用的换行符
+  - 回车符就是回到一行的开头，用符号r表示，十进制ASCII代码是13，十六进制代码为0x0D，回车（return）；
+  - 换行符就是另起一行，用n符号表示，ASCII代码是10，十六制为0x0A， 换行（newline）
+- 应用情况
+  - Dos和Windows平台： 使用回车（CR）和换行（LF）两个字符来结束一行，回车+换行(CR+LF)，即“\r\n”；
+  - Mac 和 Linux平台：只使用换行（LF）一个字符来结束一行，即“\n”；
+  - 最早Mac每行结尾是回车CR 即'\r'，后mac os x 也投奔了 unix。
+- 解决方法
+  - Git 可以在你提交时自动地把回车（CR）和换行（LF）转换成换行（LF），而在检出代码时把换行（LF）转换成回车（CR）和换行（LF）。
+    ```
+    #提交时转换为LF，检出时转换为CRLF
+    $ git config --global core.autocrlf true
+    ```
+- ✅大功告成
+  
+
+### 🆘使用"git push"命令提示"Failed to connect to github.com port 443 : Timed out"❓
+
+- 问题分析：Git 所设端口与系统代理不一致，需重新设置
+- 解决方法：将Git的网络设置修改为系统当前对应的IP和端口号
+  - 打开 设置 --> 网络与Internet --> 查找代理
+  - 记录下当前系统代理的 IP 地址和端口号
+  - 修改Git的网络设置
+    ```
+    # 注意修改成自己的IP和端口号
+    git config --global http.proxy http://127.0.0.1:7890 
+    git config --global https.proxy http://127.0.0.1:7890
+    ```
+
+- ✅大功告成
