@@ -68,7 +68,7 @@ public:
 
 所以可以考虑双指针法，分别从最前端和最后端开始向中间遍历，输出两个指针中相对较大的那个元素，存放在新数组的高位，直到两个指针相遇退出循环
 
-![977.有序数组的平方.gif](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/day02/pic1.gif)
+![977.有序数组的平方.gif](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/day02/pic2.gif)
 
 我的代码
 
@@ -144,7 +144,7 @@ public:
 > 滑动窗口的精妙之处在于根据当前子序列和大小的情况，不断调节子序列的起始位置。从而将O(n^2)的暴力解法降为O(n)。
 > 
 
-![209.长度最小的子数组.gif](Day02%20%E6%95%B0%E7%BB%84part02%20111608da29da4bad9ae244b3c04a3c82/209.%25E9%2595%25BF%25E5%25BA%25A6%25E6%259C%2580%25E5%25B0%258F%25E7%259A%2584%25E5%25AD%2590%25E6%2595%25B0%25E7%25BB%2584.gif)
+![209.长度最小的子数组.gif](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/day02/pic1.gif)
 
 - 只用一个for循环来表示滑动窗口的终止位置，然后针对每个符合条件`sum>s`的窗口进行起始位置的试探，直到收敛到最短的符合条件的区间，记录该区间长度，并与之前保存下来的最短长度进行比较并取小。
 - 在本题中实现滑动窗口，主要确定如下三点：
@@ -198,7 +198,7 @@ public:
 
 - 重点在于坚持**循环不变量原则（左闭右开or左闭右闭），**本题适合采用全程左闭右开的原则，这样一圈才能按照统一的规则画下来
     
-    ![20220922102236.png](Day02%20%E6%95%B0%E7%BB%84part02%20111608da29da4bad9ae244b3c04a3c82/20220922102236.png)
+    ![螺旋矩阵](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/day02/pic3.png)
     
 
 ### 按层循环
@@ -251,7 +251,7 @@ public:
         - 更新边界：例如从左到右填完后，上边界`top++`，相当于上边界向内缩1
     - 使用`k <= tar`而不是`l < r || t < b`作为迭代条件，是为了解决当`n`为奇数时，矩阵中心数字无法在迭代过程中被填充的问题。
         
-        ![ccff416fa39887c938d36fec8e490e1861813d3bba7836eda941426f13420759-Picture1.png](Day02%20%E6%95%B0%E7%BB%84part02%20111608da29da4bad9ae244b3c04a3c82/ccff416fa39887c938d36fec8e490e1861813d3bba7836eda941426f13420759-Picture1.png)
+        ![模拟螺旋矩阵](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/day02/pic4.png)
         
 
 ```cpp
