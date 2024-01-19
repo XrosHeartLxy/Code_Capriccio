@@ -31,7 +31,7 @@
 
 链表是一种通过指针串联在一起的线性结构，每一个节点由两部分组成，一个是数据域一个是指针域（存放指向下一个节点的指针），最后一个节点的指针域指向null（空指针的意思）。
 
-![20200806194529815.png](Day03%20%E9%93%BE%E8%A1%A8part01%20069b9f86914144d3bb8a2ad2cc482869/20200806194529815.png)
+![pic1.png](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/day03/pic1.png)
 
 ### 链表类型
 
@@ -64,11 +64,11 @@ ListNode* head = new ListNode(5); //通过构造函数初始化节点
 
 - 删除节点：将C节点的next指针指向E节点就可以了。//C++中D节点需要手动释放
 
-![20200806195114541-20230310121459257.png](Day03%20%E9%93%BE%E8%A1%A8part01%20069b9f86914144d3bb8a2ad2cc482869/20200806195114541-20230310121459257.png)
+![pic2.png](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/day03/pic2.png)
 
 - 添加节点：C节点的next指向新添加节点E，E节点的next指向D节点。
 
-![20200806195134331-20230310121503147.png](Day03%20%E9%93%BE%E8%A1%A8part01%20069b9f86914144d3bb8a2ad2cc482869/20200806195134331-20230310121503147.png)
+![pic3.png](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/day03/pic3.png)
 
 - 时间复杂度：链表添加和删除复杂度都是O(1)，查询复杂度为O(n)
 - 故链表适用于数据量不固定，频繁增删、较少查询的场景
@@ -89,11 +89,11 @@ ListNode* head = new ListNode(5); //通过构造函数初始化节点
 
 - 需要删除的结点**为头结点**：将头指针向后**移动一位**即可，并释放原头结点内存
 
-![1631933200-RZaQnm-file_1631933200172.png](Day03%20%E9%93%BE%E8%A1%A8part01%20069b9f86914144d3bb8a2ad2cc482869/1631933200-RZaQnm-file_1631933200172.png)
+![pic4.png](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/day03/pic4.png)
 
 - 需要删除的结点**非头结点**：将该结点**前驱的next指针**指向该结点的**后继结点**，并**释放**该结点内存
 
-![1631933200-dsfmrO-file_1631933200252.png](Day03%20%E9%93%BE%E8%A1%A8part01%20069b9f86914144d3bb8a2ad2cc482869/1631933200-dsfmrO-file_1631933200252.png)
+![pic5.png](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/day03/pic5.png)
 
 - 时间复杂度O(n)  || 空间复杂度O(1)
 
@@ -134,7 +134,7 @@ public:
 
 此时原链表的所有结点都可以按照统一方式进行移除了——即将该结点**前驱的next指针**指向该结点的**后继结点**，并**释放**该结点内存。
 
-![1631933200-HCPyhs-file_1631933200194.png](Day03%20%E9%93%BE%E8%A1%A8part01%20069b9f86914144d3bb8a2ad2cc482869/1631933200-HCPyhs-file_1631933200194.png)
+![pic6.png](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/day03/pic6.png)
 
 - 时间复杂度O(n)  || 空间复杂度O(1)
 
@@ -311,7 +311,7 @@ public:
 
 只需要改变链表各个结点next指针的方向，就可直接将链表反转，而不用重新定义新的链表，如图所示
 
-![20210218090901207.png](Day03%20%E9%93%BE%E8%A1%A8part01%20069b9f86914144d3bb8a2ad2cc482869/20210218090901207.png)
+![pic7.png](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/day03/pic7.png)
 
 ### 第一种写法：双指针法
 
