@@ -134,7 +134,7 @@ public:
 💡 给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null 。题目数据 保证 整个链式结构中不存在环。
 注意，函数返回结果后，链表必须 保持其原始结构 。
 
-![pic3.png]([Day04%20%E9%93%BE%E8%A1%A8part02%20f7d2692a1be04efca004a2e0e5eca3e9/20211219221723.png](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/Day04/pic3.png))
+![pic3.png](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/Day04/pic3.png)
 
 </aside>
 
