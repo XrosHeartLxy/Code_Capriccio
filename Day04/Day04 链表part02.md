@@ -40,11 +40,11 @@
 
 - 初始时，cur指向虚拟头结点，然后进行如下三步：
     
-    ![24.两两交换链表中的节点1.png](Day04%20%E9%93%BE%E8%A1%A8part02%20f7d2692a1be04efca004a2e0e5eca3e9/24.%25E4%25B8%25A4%25E4%25B8%25A4%25E4%25BA%25A4%25E6%258D%25A2%25E9%2593%25BE%25E8%25A1%25A8%25E4%25B8%25AD%25E7%259A%2584%25E8%258A%2582%25E7%2582%25B91.png)
+    ![pic1.png](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/Day04/pic1.png)
     
 - 操作之后链表如下
     
-    ![24.两两交换链表中的节点3.png](Day04%20%E9%93%BE%E8%A1%A8part02%20f7d2692a1be04efca004a2e0e5eca3e9/24.%25E4%25B8%25A4%25E4%25B8%25A4%25E4%25BA%25A4%25E6%258D%25A2%25E9%2593%25BE%25E8%25A1%25A8%25E4%25B8%25AD%25E7%259A%2584%25E8%258A%2582%25E7%2582%25B93.png)
+    ![pic2.png](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/Day04/pic2.png)
     
 - 然后将cur指向1号结点重复上述操作完成3、4号结点的换序；
 - 重复以上操作直到不满足`cur`后面存在两个结点的条件，结束算法。
@@ -134,7 +134,7 @@ public:
 💡 给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null 。题目数据 保证 整个链式结构中不存在环。
 注意，函数返回结果后，链表必须 保持其原始结构 。
 
-![20211219221723.png](Day04%20%E9%93%BE%E8%A1%A8part02%20f7d2692a1be04efca004a2e0e5eca3e9/20211219221723.png)
+![pic3.png](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/Day04/pic3.png)
 
 </aside>
 
@@ -208,12 +208,12 @@ public:
 - **第一步：判断链表是否有环**
     - fast指针一定先进入环中，如果fast指针和slow指针相遇的话，一定是在环中相遇，这是毋庸置疑的。
         
-        ![141.环形链表.gif](Day04%20%E9%93%BE%E8%A1%A8part02%20f7d2692a1be04efca004a2e0e5eca3e9/141.%25E7%258E%25AF%25E5%25BD%25A2%25E9%2593%25BE%25E8%25A1%25A8.gif)
+        ![pic4.gif](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/Day04/pic4.gif)
         
 - ✨**第二步：如果有环，如何找到这个环的入口**
     - 假设从头结点到环形入口节点 的节点数为x。 环形入口节点到 fast指针与slow指针相遇节点 节点数为y。 从相遇节点 再到环形入口节点节点数为 z。
         
-        ![20220925103433.png](Day04%20%E9%93%BE%E8%A1%A8part02%20f7d2692a1be04efca004a2e0e5eca3e9/20220925103433.png)
+         ![pic6.gif](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/Day04/pic6.png)
         
     - 那么相遇时： slow指针走过的节点数为: `x + y`， fast指针走过的节点数：`x + y + n (y + z)`，n为fast指针在环内走了n圈才遇到slow指针，（y+z）为一圈内节点的个数A。
     - 因为fast指针是一步走两个节点，slow指针一步走一个节点， 所以 fast指针走过的节点数 = slow指针走过的节点数 * 2：`(x + y) * 2 = x + y + n (y + z)`
@@ -221,7 +221,7 @@ public:
     - 当 n为1的时候，公式就化解为 `x = z`
     - 这就意味着，**从头结点出发一个指针，从相遇节点也出发一个指针，这两个指针每次只走一个节点， 那么当这两个指针相遇的时候就是环形入口的节点**。
         
-        ![142.环形链表II（求入口）.gif](Day04%20%E9%93%BE%E8%A1%A8part02%20f7d2692a1be04efca004a2e0e5eca3e9/142.%25E7%258E%25AF%25E5%25BD%25A2%25E9%2593%25BE%25E8%25A1%25A8II%25EF%25BC%2588%25E6%25B1%2582%25E5%2585%25A5%25E5%258F%25A3%25EF%25BC%2589.gif)
+        ![pic5.gif](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/Day04/pic5.gif)
         
 - 快指针的速度只比慢指针快一步，这样可以防止快指针单次操作正好跨过慢指针。
 - 为何一定在慢指针没走够一圈的时候就能追上：慢指针进入环时，两指针相差的结点数一定是小于一圈的，故慢指针走一圈的时间里快指针必定能走至少一圈的距离，又因为速度差为1，所以两指针必定会相遇。
