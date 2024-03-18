@@ -2,34 +2,38 @@
 
 ### 任务URL[第二章 链表part02 (qq.com)](https://docs.qq.com/doc/DUFNjYUxYRHRVWklp)
 
-- ****24. 两两交换链表中的节点****
+- **24. 两两交换链表中的节点**
     
-    用虚拟头结点，这样会方便很多。
+    [📃力扣题目链接](https://leetcode.cn/problems/swap-nodes-in-pairs/)
     
-    本题链表操作就比较复杂了，建议大家先看视频，视频里我讲解了注意事项，为什么需要temp保存临时节点。
+    [🤓文章讲解](https://programmercarl.com/0024.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html)
     
-    题目链接/文章讲解/视频讲解： [https://programmercarl.com/0024.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html](https://programmercarl.com/0024.%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9.html)
+    [📽️视频讲解](https://www.bilibili.com/video/BV1YT411g7br/)
     
-- ****19.删除链表的倒数第N个节点****
+- **19.删除链表的倒数第N个节点**
     
-    双指针的操作，要注意，删除第N个节点，那么我们当前遍历的指针一定要指向 第N个节点的前一个节点，建议先看视频。
+    [📃力扣题目链接](https://leetcode.cn/problems/remove-nth-node-from-end-of-list/description/)
     
-    题目链接/文章讲解/视频讲解：[https://programmercarl.com/0019.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9.html](https://programmercarl.com/0019.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9.html)
+    [🤓文章讲解](https://programmercarl.com/0019.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9.html)
     
-- ****面试题 02.07. 链表相交****
+    [📽️视频讲解](https://www.bilibili.com/video/BV1vW4y1U7Gf/)
     
-    本题没有视频讲解，大家注意 数值相同，不代表指针相同。
+- **面试题 02.07. 链表相交**
     
-    题目链接/文章讲解：[https://programmercarl.com/%E9%9D%A2%E8%AF%95%E9%A2%9802.07.%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4.html](https://programmercarl.com/%E9%9D%A2%E8%AF%95%E9%A2%9802.07.%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4.html)
+    [📃力扣题目链接](https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci/description/)
     
-- ****142.环形链表II****
+    [🤓文章讲解](https://programmercarl.com/%E9%9D%A2%E8%AF%95%E9%A2%9802.07.%E9%93%BE%E8%A1%A8%E7%9B%B8%E4%BA%A4.html)
     
-    算是链表比较有难度的题目，需要多花点时间理解 确定环和找环入口，建议先看视频。
+- **142.环形链表II**
     
-    题目链接/文章讲解/视频讲解：[https://programmercarl.com/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.html](https://programmercarl.com/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.html)
+    [📃力扣题目链接](https://leetcode.cn/problems/linked-list-cycle-ii/)
+    
+    [🤓文章讲解](https://programmercarl.com/0142.%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II.html)
+    
+    [📽️视频讲解](https://www.bilibili.com/video/BV1if4y1d7ob/)
     
 
-## ****24. 两两交换链表中的节点****
+## **24. 两两交换链表中的节点**
 
 <aside>
 💡 给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题（即，只能进行节点交换）。
@@ -40,18 +44,18 @@
 
 - 初始时，cur指向虚拟头结点，然后进行如下三步：
     
-    ![pic1.png](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/Day04/pic1.png)
+    ![24.两两交换链表中的节点1.png](pic1.png)
     
 - 操作之后链表如下
     
-    ![pic2.png](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/Day04/pic2.png)
+    ![24.两两交换链表中的节点3.png](pic2.png)
     
 - 然后将cur指向1号结点重复上述操作完成3、4号结点的换序；
 - 重复以上操作直到不满足`cur`后面存在两个结点的条件，结束算法。
 
 ### 一些注意事项
 
-- 本题在链表头部可能发生交换，所以需要使用虚拟头结点来简化代码逻辑
+- 本题在**链表头部可能发生交换**，所以需要使用虚拟头结点来简化代码逻辑
 - 对于循环条件`while(cur!=NULL && cur->next!=NULL)`
     - 里面的条件前后顺序不能颠倒，否则可能会访问空指针
     - 两个条件中间必须用`&&`连接，这样才可以保证奇数项、偶数项均可跳出循环
@@ -87,7 +91,7 @@ public:
 };
 ```
 
-## ****19.删除链表的倒数第N个节点****
+## **19.删除链表的倒数第N个节点**
 
 <aside>
 💡 给你一个链表，删除链表的倒数第 `n` **个结点，并且返回链表的头结点。
@@ -103,45 +107,47 @@ public:
 - 最后要返回`dummyHead->next`，而非head，因为head可能已经变成空结点了。
 - 时间复杂度O(n)  ||  空间复杂度O(1)
 
-### 代码如下
+### 【二刷】代码如下
 
 ```cpp
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
-        ListNode* dummyHead = new ListNode();
-        dummyHead->next = head;
-        ListNode* aux = dummyHead;
-        ListNode* cur = dummyHead;
+        ListNode* dummyHead = new ListNode(0,head);
+        ListNode* fast = dummyHead;
+        // 快指针先走n步
         while(n--){
-            aux = aux->next;
+            fast = fast -> next;
         }
-        while(aux->next != NULL){
-            cur = cur->next;
-            aux = aux->next;
+        ListNode* slow = dummyHead;
+        // 双指针一起走,快指针到末尾时慢指针正好到倒数第n个
+        while(fast -> next){
+            fast = fast -> next;
+            slow = slow -> next;
         }
-        ListNode* temp = cur->next;
-        cur->next = temp->next;
+        // 删除目标节点
+        ListNode* temp = slow -> next;
+        slow -> next = temp -> next;
         delete temp;
-        return dummyHead->next;     
+        return dummyHead -> next;
     }
 };
 ```
 
-## ****面试题 02.07. 链表相交****
+## **面试题 02.07. 链表相交**
 
 <aside>
 💡 给你两个单链表的头节点 headA 和 headB ，请你找出并返回两个单链表相交的起始节点。如果两个链表没有交点，返回 null 。题目数据 保证 整个链式结构中不存在环。
 注意，函数返回结果后，链表必须 保持其原始结构 。
 
-![pic3.png](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/Day04/pic3.png)
+![20211219221723.png](pic3.png)
 
 </aside>
 
 ### 思路
 
-- 究其根本就是求两个链表交点结点的指针，是结点相同，而不是结点数值相同；
-- 求出两个链表的长度，并求其差值，然后让长链表的指针与短链表开始结点对其，使两个指针接下来要扫描的结点数相同；
+- 究其根本就是求两个链表交点结点的指针，是**结点相同**，而不是结点数值相同；
+- 求出两个链表的长度，并求其差值，然后让长链表的指针与短链表开始结点对齐，使两个指针接下来要扫描的结点数相同；
 - 同时移动curA、curB指针，并判断两个指针指向的结点是否为同一结点，若curA==curB，则找到所求交点，否则退出循环返回空。
 
 ### 注意事项
@@ -191,7 +197,49 @@ public:
 };
 ```
 
-## ****142.环形链表II****
+### 【二刷】代码如下
+
+```cpp
+class Solution {
+public:
+    ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+        // 分别统计两个链表长度
+        ListNode* curA = headA;
+        ListNode* curB = headB;
+        int countA = 0,countB = 0;
+        while(curA){
+            countA++;
+            curA = curA -> next;
+        }
+        while(curB){
+            countB++;
+            curB = curB -> next;
+        }
+        // 将长链表向短链表对齐
+        curA = headA;
+        curB = headB;
+        int diff = abs(countA - countB);
+        if(countA>countB){
+            while(diff--){
+                curA = curA -> next;
+            }
+        }else{
+            while(diff--){
+                curB = curB -> next;
+            }
+        }
+        // 寻找是否有相同节点
+        while(curA && curB){
+            if(curA == curB) return curA;
+            curA = curA -> next;
+            curB = curB -> next;
+        }
+        return NULL;
+    }
+};
+```
+
+## **142.环形链表II**
 
 <aside>
 💡 给定一个链表的头节点  `head` ，返回链表开始入环的第一个节点。 *如果链表无环，则返回 `null`。*
@@ -199,6 +247,14 @@ public:
 如果链表中有某个节点，可以通过连续跟踪 `next` 指针再次到达，则链表中存在环。 为了表示给定链表中的环，评测系统内部使用整数 `pos` 来表示链表尾连接到链表中的位置（**索引从 0 开始**）。如果 `pos` 是 `-1`，则在该链表中没有环。**注意：`pos` 不作为参数进行传递**，仅仅是为了标识链表的实际情况。
 
 **不允许修改** 链表。
+
+**示例 1：**
+
+![https://assets.leetcode.com/uploads/2018/12/07/circularlinkedlist.png](pic4.png)
+
+输入：head = [3,2,0,-4], pos = 1
+输出：返回索引为 1 的链表节点
+解释：链表中有一个环，其尾部连接到第二个节点。
 
 </aside>
 
@@ -208,12 +264,12 @@ public:
 - **第一步：判断链表是否有环**
     - fast指针一定先进入环中，如果fast指针和slow指针相遇的话，一定是在环中相遇，这是毋庸置疑的。
         
-        ![pic4.gif](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/Day04/pic4.gif)
+        ![141.环形链表.gif](pic4.gif)
         
 - ✨**第二步：如果有环，如何找到这个环的入口**
     - 假设从头结点到环形入口节点 的节点数为x。 环形入口节点到 fast指针与slow指针相遇节点 节点数为y。 从相遇节点 再到环形入口节点节点数为 z。
         
-         ![pic6.gif](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/Day04/pic6.png)
+        ![20220925103433.png](pic6.png)
         
     - 那么相遇时： slow指针走过的节点数为: `x + y`， fast指针走过的节点数：`x + y + n (y + z)`，n为fast指针在环内走了n圈才遇到slow指针，（y+z）为一圈内节点的个数A。
     - 因为fast指针是一步走两个节点，slow指针一步走一个节点， 所以 fast指针走过的节点数 = slow指针走过的节点数 * 2：`(x + y) * 2 = x + y + n (y + z)`
@@ -221,11 +277,11 @@ public:
     - 当 n为1的时候，公式就化解为 `x = z`
     - 这就意味着，**从头结点出发一个指针，从相遇节点也出发一个指针，这两个指针每次只走一个节点， 那么当这两个指针相遇的时候就是环形入口的节点**。
         
-        ![pic5.gif](https://github.com/XrosHeartLxy/Code_Capriccio/blob/main/Day04/pic5.gif)
+        ![142.环形链表II（求入口）.gif](pic5.gif)
         
 - 快指针的速度只比慢指针快一步，这样可以防止快指针单次操作正好跨过慢指针。
 - 为何一定在慢指针没走够一圈的时候就能追上：慢指针进入环时，两指针相差的结点数一定是小于一圈的，故慢指针走一圈的时间里快指针必定能走至少一圈的距离，又因为速度差为1，所以两指针必定会相遇。
-- 时间复杂度O(n)  ||  空间复杂度O(1)
+- 时间复杂度$O(n)$  ||  空间复杂度$O(1)$
 
 ### 代码如下
 
